@@ -4,14 +4,11 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Set the folder where the scripts are located
-folderPath := "C:\WScripts\autorun"
-
-; Get a list of all files in the folder
-fileList := FileList(folderPath, "*.ahk")
+path := "C:\WScripts\autorun\*.ahk"
 
 ; Loop through the list of files
-for file in fileList
+Loop Files, % path
 {
     ; Run each script
-    Run, %folderPath%\%file%
+    Run, %folderPath%%A_LoopFileShortPath%
 }
