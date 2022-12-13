@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-#F11:: HideShowTaskbar()
+F11:: HideShowTaskbar()
 
 HideShowTaskbar() {
    static SW_HIDE := 0, SW_SHOWNA := 8, SPI_SETWORKAREA := 0x2F
